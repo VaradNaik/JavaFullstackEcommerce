@@ -16,8 +16,8 @@
             <td><img [src]="'assets/images/products/' + extractImageName(item)" [alt]="item.name" width="50"></td>
             <td>{{ item.name }}</td>
             <td>{{ item.quantity }}</td>
-            <td>{{ item.price | currency:"INR" }}</td>
-            <td>{{ (item.quantity * item.price) | currency:"INR" }}</td>
+            <td>{{ item.price | currency:"USD" }}</td>
+            <td>{{ (item.quantity * item.price) | currency:"USD" }}</td>
           </tr>
         </tbody>
       </table>
