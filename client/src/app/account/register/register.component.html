@@ -59,7 +59,7 @@
        </style>
    </head>
    <body>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <!-- <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <h2>Register</h2>
       <div>
         <label for="username">Username: (more than 2 characters)</label>
@@ -74,7 +74,31 @@
         <input type="password" id="password" formControlName="password">
       </div>
       <button type="submit" [disabled]="!registerForm.valid">Register</button>
+    </form> -->
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <h2>Register</h2>
+      <!-- Username Input -->
+      <label for="username">Username: (more than 2 characters)</label>
+      <input type="text" formControlName="username">
+      <div *ngIf="registerForm.get('username')?.errors?.['duplicate']" style="color: red; font-weight: bold;">
+        Duplicate Username - please try a different username
+      </div>
+    
+      <!-- Email Input -->
+      <label for="email">Email: should contain '@' </label>
+      <input type="email" formControlName="email">
+      <div *ngIf="registerForm.get('email')?.errors?.['duplicate']" style="color: red; font-weight: bold;">
+        Duplicate Email - please use a different email ID
+      </div>
+    
+      <!-- Password Input -->
+      <label for="password">Password: more than 6 characters long</label>
+      <input type="password" formControlName="password">
+    
+      <!-- Submit Button -->
+      <button type="submit">Register</button>
     </form>
+    
     
    
        <script>
