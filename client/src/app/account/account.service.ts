@@ -48,14 +48,7 @@ export class AccountService {
       })
     )
   }
-  register(values: any){
-    return this.http.post<User>(this.apiUrl + '/register', values).pipe(
-      map(user=>{
-        localStorage.setItem('token', user.token);
-        this.currentUserSource.next(user);
-      })
-    )
-  }
+  
   logout() {
     localStorage.removeItem('token');
     this.currentUserSource.next(null);
