@@ -1,0 +1,69 @@
+version: '3.1'
+
+services:
+  ecommerce-mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data.sql:/docker-entrypoint-initdb.d/data.sql
+      - mysql-data:/var/lib/mysql
+
+  ecommerce-redis:
+    image: "redis:latest"
+    container_name: "my-redis-container"
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
+  mysql-data:
+
+# version: '3.8'
+# services:
+#   mysql:
+#     image: mysql:5.7
+#     volumes:
+#       - db-data:/var/lib/mysql
+#       - ./mysql:/docker-entrypoint-initdb.d
+#     environment:
+#       MYSQL_ROOT_PASSWORD: rootpassword
+#       MYSQL_DATABASE: sportscenter
+#       MYSQL_USER: root
+#       MYSQL_PASSWORD: rootpassword
+#     ports:
+#       - "3306:3306"
+
+#   backend:
+#     build: .
+#     ports:
+#       - "8080:8080"
+#     environment:
+#       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/sportscenter
+#       SPRING_DATASOURCE_USERNAME: root
+#       SPRING_DATASOURCE_PASSWORD: password
+#       SPRING_REDIS_HOST: redis
+#     depends_on:
+#       - mysql
+#       - redis
+
+#   frontend:
+#     build: ./client
+#     ports:
+#       - "4200:80"
+#     depends_on:
+#       - backend
+
+#   redis:
+#     image: redis:alpine
+#     ports:
+#       - "6379:6379"
+
+# volumes:
+#   db-data:
+

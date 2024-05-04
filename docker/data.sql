@@ -2,9 +2,9 @@
 -- Schema full-stack-sportscenter
 -- -----------------------------------------------------
 CREATE DATABASE IF NOT EXISTS `sportscenter`;
-CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON `sportscenter`.* TO 'user'@'%' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
+-- CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'password';
+-- GRANT ALL PRIVILEGES ON `sportscenter`.* TO 'user'@'%' WITH GRANT OPTION;
+-- FLUSH PRIVILEGES;
 USE `sportscenter` ;
 
 -- Drop existing tables if they exist
