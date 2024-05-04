@@ -10,9 +10,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/sportscenter
+    url: jdbc:mysql://mysql:3306/sportscenter
     username: root
-    password: varadnaik123
+    password: password
   application:
     name: SportsCenter
   jpa:
