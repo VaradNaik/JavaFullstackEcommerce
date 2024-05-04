@@ -32,10 +32,10 @@ services:
       - db-data:/var/lib/mysql
       - ./mysql:/docker-entrypoint-initdb.d
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: sportscenter
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_USER: root
+      MYSQL_PASSWORD: rootpassword
     ports:
       - "3306:3306"
 
