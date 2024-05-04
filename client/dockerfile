@@ -1,5 +1,5 @@
 # Use the official Node image to build the project
-FROM node:14 as build
+FROM node:18 as build
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm install
@@ -8,5 +8,5 @@ RUN npm run build
 
 # Use nginx to serve the built application
 FROM nginx:alpine
-COPY --from=build /app/dist/angular-app /usr/share/nginx/html
+COPY --from=build /app/dist/client /usr/share/nginx/html
 EXPOSE 80
