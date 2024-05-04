@@ -3,10 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.18</version>
+
+		<relativePath/>
 	</parent>
 	<groupId>com.ecoomerce</groupId>
 	<artifactId>sportscenter</artifactId>
@@ -14,7 +16,7 @@
 	<name>sportscenter</name>
 	<description>Sports center website</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
