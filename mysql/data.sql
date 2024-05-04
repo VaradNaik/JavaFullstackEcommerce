@@ -89,3 +89,13 @@ INSERT INTO Product (Name, Description, Price, PictureUrl, ProductTypeId, Produc
                                                                                               ('Yonex SUNR 4826TK BT6-SR Badminton Kit Bag (Black/Red/White)', 'Yonex SUNR 4826TK BT6-SR Badminton Kit Bag (Black/Red/White)', 1999, 'images/Product/yonex-kitback-1.png', 4, 4),
                                                                                               ('Yonex SUNR LRB05 MS BT6 S Badminton Kit Bag (Blue/Red)', 'Yonex SUNR LRB05 MS BT6 S Badminton Kit Bag (Blue/Red)', 1499, 'images/Product/yonex-kitback-2.png', 4, 4),
                                                                                               ('Yonex SUNR LRB05 MS BT6 S Badminton Kit Bag (Grey/Orange)', 'Yonex SUNR LRB05 MS BT6 S Badminton Kit Bag (Grey/Orange)', 1499, 'images/Product/yonex-kitback-3.png', 4, 4);
+
+CREATE TABLE `users` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`)
+);
