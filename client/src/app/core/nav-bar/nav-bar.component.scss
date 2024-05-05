@@ -1,19 +1,26 @@
 .navbar {
-  background-color: #fff; /* Background color */
-  border-bottom: 1px solid #ddd; /* Bottom border */
-  /* Ensure the navbar is fixed at the top */
+  background-color: #add8e6; /* Ensure this is the color you desire, light blue */
+  border-bottom: 1px solid #ddd;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Keeps items spaced out to the edges */
+  align-items: center;
 }
 
-/* Center the brand name */
 .navbar-brand {
-  font-weight: bold;
+  flex-grow: 1;
+  justify-content: center; /* Center the content */
+  text-align: center;
+  display: flex;
   align-items: center;
-  font-weight: bold;
+  margin-left: 20px; /* Shifts the logo and text to the right */
+  font-size: 24px; /* Increase the font size */
 }
+
+
 
 /* Style the navigation links */
 .navbar-nav .nav-item {
