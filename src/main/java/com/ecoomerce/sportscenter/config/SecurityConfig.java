@@ -23,8 +23,6 @@ public class SecurityConfig {
     private final JwtAuthenticationEntryPoint entryPoint;
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
-    private CustomUserDetailsService customUserDetailsService;
-
     @Autowired
     private AuthenticationManagerBuilder authenticationManagerBuilder;
 
@@ -33,7 +31,6 @@ public class SecurityConfig {
                           CustomUserDetailsService customUserDetailsService) {
         this.entryPoint = entryPoint;
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
-        this.customUserDetailsService = customUserDetailsService;
     }
 
     @Bean
