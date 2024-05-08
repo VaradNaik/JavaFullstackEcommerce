@@ -33,7 +33,7 @@ volumes:
 #       - ./mysql:/docker-entrypoint-initdb.d
 #     environment:
 #       MYSQL_ROOT_PASSWORD: rootpassword
-#       MYSQL_DATABASE: sportscenter
+#       MYSQL_DATABASE: icarus
 #       MYSQL_USER: root
 #       MYSQL_PASSWORD: rootpassword
 #     ports:
@@ -44,7 +44,7 @@ volumes:
 #     ports:
 #       - "8080:8080"
 #     environment:
-#       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/sportscenter
+#       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/icarus
 #       SPRING_DATASOURCE_USERNAME: root
 #       SPRING_DATASOURCE_PASSWORD: password
 #       SPRING_REDIS_HOST: redis
